@@ -12,48 +12,39 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Build the Docker image
-      run: docker build -t herraksoy/projects:3D-Portfolio-Website -f Src-Image/Dockerfile Src-Image  
+      run: docker build -t herraksoy/projects:Responsive-Website-Design -f Src-Image/Dockerfile Src-Image  
 
     - name: Docker Login
       run: echo ${{ secrets.DOCKER_PWD }} | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
     - name: Push Docker image to Dockerhub Public Repo
-      run: docker push herraksoy/projects:3D-Portfolio-Website
+      run: docker push herraksoy/projects:Responsive-Website-Design
 
     - name: Update Docker Image Tag
+      run: docker tag herraksoy/projects:Responsive-Website-Design herraksoy/team-projects:Responsive-Website-Design
+
+    - name: Push Docker image to Dockerhub Private Repo
+      run: docker push herraksoy/team-projects:Responsive-Website-Design
+
+    # Mehmet abi icin    
+      
+    - name: Build the Docker image
+      run: docker build -t < Degistirmelisin > -f Src-Image/Dockerfile Src-Image  
+
+    - name: Docker Login      # secretleri olusturuken ayni value olmamali
+      run: echo ${{ secrets.DOCKER_PWD }} | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+    - name: Push Docker image to Dockerhub Public Repo
+      run: docker push < Degistirmelisin >
+
+
+
+    - name: Update Docker Image Tag     # Bu kisimdan asagisi önemli degil ben Privat repoyu denemistim
       run: docker tag herraksoy/projects:3D-Portfolio-Website herraksoy/team-projects:3D-Portfolio-Website
 
     - name: Push Docker image to Dockerhub Private Repo
       run: docker push herraksoy/team-projects:3D-Portfolio-Website
 
-
-# name: Deploy to Docker Repository
-
-# on:
-#   workflow_dispatch:
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - name: Checkout repository
-#       uses: actions/checkout@v2
-      
-#     - name: Build the Docker image
-#       run: docker build -t docker.io/herraksoy/projects:3D-Portfolio-Website -f Src-Image/Dockerfile Src-Image  
-
-#     - name: Docker Login
-#       run: docker login --username ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PWD }}
-
-#     - name: Push Docker image to Dockerhub Public Repo
-#       run: docker push docker.io/herraksoy/projects:3D-Portfolio-Website   # docker.io may not be written
-
-#     - name: Update Docker Image Tag
-#       run: docker tag herraksoy/projects:3D-Portfolio-Website herraksoy/team-projects:3D-Portfolio-Website
-
-#     - name: Push Docker image to Dockerhub Privat Repo
-#       run: docker push docker.io/herraksoy/team-projects:3D-Portfolio-Website
 
 
 
