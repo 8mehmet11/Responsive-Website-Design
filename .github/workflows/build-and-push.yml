@@ -42,7 +42,7 @@ jobs:
     #- name: Update Docker Image Tag     # Bu kisimdan asagisi önemli degil ben Privat repoyu denemistim
      # run: docker tag herraksoy/projects:3D-Portfolio-Website herraksoy/team-projects:3D-Portfolio-Website
 
-    #- name: Push Docker image to Dockerhub Private Repo
+    # - name: Push Docker image to Dockerhub Private Repo
      # run: docker push herraksoy/team-projects:3D-Portfolio-Website
 
 
