@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <script src="https://kit.fontawesome.com/c18b216f71.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Responsive-Website-Design.gif" class="logo" style="width: 500px; height: 100px;">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>DevOps Engineer</p>
+            <h1>Hi, I'm <span>Ahmet</span><br>Aksoy From Turkey</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="{{ url_for('static', filename='images/user.jpeg') }}">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I'm Ahmet Aksoy, a DevOps Engineer. With approximately 2 years of experience
+                in the DevOps field, I am open-minded and passionate about automating IT processes. 
+                I have a particular interest in developing and implementing effective Continuous 
+                Integration and Delivery (CI/CD) pipelines. In this process,I utilize proven practices 
+                such as containerization, orchestration, monitoring, infrastructure automation tools, 
+                and cloud solutions. Additionally, I am eager to learn new technologies..</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>DevOps</span><br>K8s | Docker | Github | Jenkins | Linux | Python | Ansible | Argocd</li>
+                        <li><span>Cloud Providers</span><br>AWS | Azure</li>
+                        <li><span>Database</span><br>Postgresql | Mssql</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024 - Current</span><br>DevOps Engineer - EMM-IT GmbH</li>
+                        <li><span>2015 - 2018</span><br>Teacher's Manager</li>
+                        <li><span>2010 - 2015</span><br>Mathematik Lehrer</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - 2014</span><br>THIntegriert Digitalisierung</li>
+                        <li><span>2009 - 2010</span><br>Master Degree - Erciyes University</li>
+                        <li><span>2005 - 2009</span><br>Bachelor Degree - Erciyes University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>CI/CD Development</h2>
+                <p>Jenkins, GitHub, AzureDevOps</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Containerization</h2>
+                <p>Docker, Kubernetes, Argocd</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Configuration</h2>
+                <p>Terraform, Crossplane, Ansible</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="{{ url_for('static', filename='images/work-1.png') }}">
+                <div class="layer">
+                    <h3>3D-Portfolio-Project</h3>
+                    <p>Creating our 3D-Portfolio-Project helps strengthen your personal brand and 
+                    establish a professional image. By effectively showcasing your resume and achievements, 
+                    you can leave a positive impression on potential employers or partners. Moreover, 
+                    sharing your contact information expands your professional network and directs traffic 
+                    to social media and other platforms.</p>
+                    <a href="https://github.com/Herr-Aksoy/3D-Portfolio-Project" target="_blank" title="Learn more"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://portolio1-my-projects.netlify.app/" target="_blank" title="Live Project"><i class="fa-solid fa-play"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{{ url_for('static', filename='images/work-2.png') }}">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
+                    <a href="https://github.com/Herr-Aksoy/Responsive-Website-Design" target="_blank" title="Learn more"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="" target="_blank" title="Live Project"><i class="fa-solid fa-play"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{{ url_for('static', filename='images/work-3.png') }}">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="" target="_blank" title="Live Project"><i class="fa-solid fa-play"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/Herr-Aksoy#:~:text=605%20contributions%20in%20the%20last%20year" target="_blank" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> aksoy.ahmet.de@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +49 1629390179</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/aksoy-ahmet/" title="Linkedin Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.xing.com/profile/Ahmet_Aksoy68/web_profiles?expandNeffi=true" title="Xing Profile"><i class="fa-brands fa-square-xing"></i></i></a>
+                    <a href="https://github.com/Herr-Aksoy"><i class="fa-brands fa-square-github" title="Github Profile"></i></a>
+                    <a href="https://www.instagram.com/updated_devops?igsh=N3kxOWMwdDhsaTZl" title="Instagram Profile"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="/static/Lebenslauf-Project.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Responsive-Website-Design  <i class="fas fa-heart"></i> by <a href="#">Project Team</a></p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>                    // add your own app script link here
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzQTIjCIGdOeVEvvR4jXuGALqLsk-DPaJE984LJyuEDhMoMtVfzkYONmlhzfnxSA8hs/exec' 
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
