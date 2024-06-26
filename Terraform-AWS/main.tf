@@ -69,7 +69,7 @@ output "Project-Portfolio-SSH-connect" {
 }
 
 output "Docker-Run-Conteiner-Project" {
-  value = "docker run --name 3D-Portolio-Project -d -p 80:8080 --rm herraksoy/projects:3D-Portfolio-Website"
+  value = "docker run --name Responsive-Website-Design -d -p 80:8080 --rm herraksoy/projects:Responsive-Website-Design"
 }
 
 
