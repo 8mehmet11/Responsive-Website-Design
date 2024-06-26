@@ -29,24 +29,7 @@ jobs:
     - name: Push Docker image to Dockerhub Private Repo
       run: docker push ${{ secrets.DOCKER_USERNAME }}/team-projects:Responsive-Website-Design
 
-    # Mehmet abi icin    
-      
-    #- name: Build the Docker image
-     # run: docker build -t < Degistirmelisin > -f Src-Image/Dockerfile Src-Image  
 
-    #- name: Docker Login      # secretleri olusturuken ayni value olmamali
-     # run: echo ${{ secrets.DOCKER_PWD }} | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
-
-    #- name: Push Docker image to Dockerhub Public Repo
-     # run: docker push < Degistirmelisin >
-
-
-
-    #- name: Update Docker Image Tag     # Bu kisimdan asagisi önemli degil ben Privat repoyu denemistim
-     # run: docker tag herraksoy/projects:3D-Portfolio-Website herraksoy/team-projects:3D-Portfolio-Website
-
-    # - name: Push Docker image to Dockerhub Private Repo
-     # run: docker push herraksoy/team-projects:3D-Portfolio-Website
 
 
 
