@@ -55,7 +55,7 @@
   </tr>
 </table> -->
   
-<br><br>
+<!-- <br><br> -->
 
 ## Live Project: https://portolio1-my-projects.netlify.app 
 
@@ -63,8 +63,72 @@
 
 ## Strengthen Your Professional Image with Our Responsive-Website-Design
 
+Creating our Responsive-Website-Design helps strengthen your personal brand and establish a professional image. By effectively showcasing your resume and achievements, you can leave a positive impression on potential employers or partners. Moreover, sharing your contact information expands your professional network and directs traffic to social media and other platforms. Regularly updating your portfolio to highlight recent projects and new skills demonstrates your current and active status. Building your own portfolio website or page allows for uniqueness and creativity, enabling you to shape design, content, and presentation according to your personal style. This empowers you to independently narrate your story and professional journey.
 
+## Project Technologies
 
+<table>
+  <tr>
+    <td><strong>Infrastructure:</strong></td>
+    <td>AWS (Amazon Web Services), Terraform</td>
+  </tr>
+  <tr>
+    <td><strong>Containerization & Orchestration:</strong></td>
+    <td>Docker</td>
+  </tr>
+  <tr>
+    <td><strong>CI/CD Tools:</strong></td>
+    <td>GitHub Actions</td>
+  </tr>
+  <tr>
+    <td><strong>Frontend:</strong></td>
+    <td>HTML, CSS, JavaScript</td>
+  </tr>
+  <tr>
+    <td><strong>Backend:</strong></td>
+    <td>Python, Flask</td>
+  </tr>
+  <tr>
+    <td><strong>Version Control:</strong></td>
+    <td>GitHub</td>
+  </tr>
+  <tr>
+    <td><strong>Cloud Services:</strong></td>
+    <td>AWS EC2, AWS VPC</td>
+  </tr>
+  <tr>
+    <td><strong>Container Registry:</strong></td>
+    <td>Dockerhub</td>
+  </tr>
+</table>
+  
+<br><br>
+
+## Infrastructure Process
+
+With Terraform, we create AWS resources including Virtual Private Cloud (VPC), Elastic Compute Cloud (EC2) instances, key pairs, security groups, and various outputs. When provisioning EC2 instances, we utilize user data. This user data installs software such as Docker, Git, Flask, and pip. Our application consists of HTML, CSS, and JavaScript code, tailored to run on Flask. Using Docker, we package this application to run within a container and execute the Python (.py) file. 
+
+To automatically build a Docker image of our application, we leverage GitHub Actions. In this process, a job is triggered to build a Docker image and push it to Docker Hub. Connecting via SSH to our EC2 instance, we deploy this Docker image and access our application via the specified port.
+
+## CI/CD Process
+
+CI/CD (Continuous Integration/Continuous Deployment) process is a method used to enhance efficiency in software development. This process enables rapid development, testing, and deployment of software projects, while reducing manual intervention. It facilitates continuous integration and continuous deployment.
+
+How It Works?
+
+<strong>Build and Push Stage (build-and-push.yml):</strong> This stage is a YAML file configured with GitHub Actions or similar CI/CD tools. It automatically runs with every new code commit (push operation). It builds the latest version of the Docker image and pushes it to Dockerhub or another container registry.
+
+For example, the build-and-push.yml file may include these steps:
+
+Compiling and testing the code  
+Building the Docker image  
+Pushing the Docker image to Dockerhub  
+
+<strong>Automatic Triggering:</strong>Automatic Triggering: GitHub or other CI/CD tools configure this YAML file to automatically execute these steps with every new code commit. This eliminates the need for developers or teams to manually initiate these processes with each code change.
+
+<strong>Sending the Latest Version to the Repository:</strong> The Docker image is automatically updated and sent to the container registry with each push operation. This ensures that the most current and functional version is always available.
+
+This process has become an integral part of modern software development practices, enhancing the effectiveness, reliability, and speed of software projects.
 
 
 
