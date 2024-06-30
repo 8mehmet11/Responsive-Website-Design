@@ -11,7 +11,7 @@
     <td><img src="project-images/readme-images/AhmetAksoy.png" alt="Ahmet Aksoy" width="350"></td>
     <td><img src="project-images/readme-images/MehmetSever.png" alt="Mehmet Sever" width="350"></td>
   </tr>
-    <tr>
+  <tr align="center" style="width: 67%;">
     <td><a href="" align="center">---------->Ahmet Aksoy<---------</a></td>
     <td><a href="" align="center">---------->Mehmet Sever<---------</a></td>
   </tr>
