@@ -229,21 +229,21 @@ function setup() {
 }
 
 function sendEmail(rowData) {
-  // Alıcı mail adresi
+  // Recipient e-mail address
   var recipient = "<example@gmail.com>"; // Write your own e-mail address here
 
-  // Mail konusu ve içeriği
+  // Email subject and content
   var subject = "Responsive-Website-Design";
   var body = "Contact Me";
 
-  // Verileri tablo formatında düzenleme
+  // Organize data in table format
   var message = "";
   message += "<b>New Row Data:</b><br>";
   for (var i = 0; i < rowData.length; i++) {
     message += rowData[i] + "<br>";
   }
 
-  // Mail gönderme işlemi
+  // Email sending process
   MailApp.sendEmail({
     to: recipient,
     subject: subject,
