@@ -6,7 +6,7 @@
 <br><br>
 
 ## Project Owners   width="250"
-<table>
+<table align="center" style="width: 67%;">
   <tr >
     <td><img src="project-images/readme-images/AhmetAksoy.png" alt="Ahmet Aksoy" align="center" ></td>
     <td><img src="project-images/readme-images/MehmetSever.png" alt="Mehmet Sever" align="center" ></td>
