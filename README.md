@@ -130,7 +130,38 @@ Pushing the Docker image to Dockerhub
 
 This process has become an integral part of modern software development practices, enhancing the effectiveness, reliability, and speed of software projects.
 
+### Creating .github\workflows\build-and-push.yml
 
+In order to push images to the Docker Hub repo, we create secrets in the Githup account and use them in the file.
+
+![parameters](project-images/repo-images/secrets-actions.png)
+
+We create a build-and-push.yaml file to use Github Action. And we specify the secrets inside.  
+
+**❗ Sample Code line**
+
+```sh
+
+    - name: Docker Login
+      uses: docker/login-action@v3
+      with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Push Docker image to Dockerhub Public Repo
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/projects:Responsive-Website-Design
+
+```
+
+We go to Repo > Setting > Secrets and variables > Actions and create "New repository secrets" here.
+
+![parameters](project-images/repo-images/repo-secrets.png)
+
+# Working process of the project
+
+## a-Responsive-Website-Design.html File:
+
+Enter the required information in the Responsive-Website-Design.html file.
 
 You must add the **"const scriptURL ="** link in the Responsive-Website-Design.html file.
 
@@ -178,7 +209,7 @@ function doPost(e) {
     }
     sheet.getRange(newRow, 1, 1, rowData.length).setValues([rowData]);
 
-    sendEmail(rowData); // Yeni veri eklendiğinde mail gönder
+    sendEmail(rowData); // Send email when new data is added
 
     return ContentService
       .createTextOutput(JSON.stringify({'result': 'success', 'row': newRow}))
@@ -199,7 +230,7 @@ function setup() {
 
 function sendEmail(rowData) {
   // Alıcı mail adresi
-  var recipient = "updateddevops@gmail.com"; // Write your own e-mail address here
+  var recipient = "<example@gmail.com>"; // Write your own e-mail address here
 
   // Mail konusu ve içeriği
   var subject = "Responsive-Website-Design";
@@ -242,4 +273,30 @@ Paste the URL you copied into the scriptURL variable in your HTML file:
 const scriptURL = 'https://script.google.com/macros/s/your_script_id/exec'
 
 ```
+
+## b-Configure the build-and-push.yml File:
+
+Add your own Docker Image Repository to the **build-and-push.yml** file.
+
+## c-Creating and Submitting Images with GitHub Actions:
+
+Run the **build-and-push.yml** file from the Action section of the GitHub repo.  
+GitHub Actions will create a Docker image for you and automatically push it to the specified repository.
+
+## d-Terraform Configuration:
+
+Run the **main.tf** file by making the necessary changes in the **userdata.sh** file.
+
+## e-Running Docker Container Automatically:
+
+Normally, you can run the Docker container manually by making an SSH connection to EC2. However, we can add it as a command to the user data to automate this.  
+
+To do this, update the **docker run** command written in the user data according to your needs.  
+
+By following these steps you can automatically install and run your application.
+
+<!-- ```sh
+
+
+``` -->
 
