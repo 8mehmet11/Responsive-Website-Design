@@ -8,8 +8,8 @@
 ## Project Owners   
 <table align="center" style="width: 67%;">
   <tr >
-    <td><img src="project-images/readme-images/AhmetAksoy.png" alt="Ahmet Aksoy" align="center" ></td>
-    <td><img src="project-images/readme-images/MehmetSever.png" alt="Mehmet Sever" align="center" ></td>
+    <td><img src="project-images/readme-images/AhmetAksoy.png" alt="Ahmet Aksoy" align="center" style="width: 67%;" ></td>
+    <td><img src="project-images/readme-images/MehmetSever.png" alt="Mehmet Sever" align="center" style="width: 67%;" ></td>
   </tr>
   <tr align="center" style="width: 67%;">
     <td><a href="" align="center">---------->Ahmet Aksoy<---------</a></td>
