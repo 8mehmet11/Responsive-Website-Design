@@ -5,7 +5,7 @@
 
 <br><br>
 
-## Project Owners   width="250"
+## Project Owners   
 <table align="center" style="width: 67%;">
   <tr >
     <td><img src="project-images/readme-images/AhmetAksoy.png" alt="Ahmet Aksoy" align="center" ></td>
@@ -56,6 +56,15 @@
 </table> -->
   
 <br><br>
+
+## Live Project: https://portolio1-my-projects.netlify.app 
+
+<br><br>
+
+## Strengthen Your Professional Image with Our Responsive-Website-Design
+
+
+
 
 
 
