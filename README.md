@@ -57,7 +57,7 @@
   
 <!-- <br><br> -->
 
-## Live Project: https://portolio1-my-projects.netlify.app 
+## Live Project: https://portolio2-my-projects.netlify.app 
 
 <br><br>
 
