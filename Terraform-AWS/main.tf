@@ -64,6 +64,10 @@ resource "aws_security_group" "tf-PP-sg" {
   }
 }
 
+output "Live-Project" {
+  value = "${aws_instance.Project-Portfolio.public_ip}"
+}
+
 output "Project-Portfolio-SSH-connect" {
   value = "ssh ec2-user@${aws_instance.Project-Portfolio.public_ip} -i ${local_file.PPkey.filename}"
 }

@@ -10,7 +10,14 @@ curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compo
 chmod +x /usr/local/bin/docker-compose
 yum install git -y
 
+# Projenin calistirilmasi
+# Running the project
+
+yum docker run --name Responsive-Website-Design -d -p 80:8080 --rm herraksoy/projects:Responsive-Website-Design
+
 # pip icin ekstra ayarlamalar   - image saglikli olup olmadigini denemek icin. SOnrasinda ihtiyac degil.
+# Extra settings to install pip - to test if the image is healthy. Afterwards it is not needed.
+
 # sudo yum install python3 python3-pip -y
 # sudo pip install Flask
 # sudo pip install Flask-Mail
