@@ -5,11 +5,11 @@
 
 <br><br>
 
-## Project Owners
+## Project Owners   width="250"
 <table>
-  <tr align="center" style="width: 67%;">
-    <td><img src="project-images/readme-images/AhmetAksoy.png" alt="Ahmet Aksoy" ></td>
-    <td><img src="project-images/readme-images/MehmetSever.png" alt="Mehmet Sever" ></td>
+  <tr >
+    <td><img src="project-images/readme-images/AhmetAksoy.png" alt="Ahmet Aksoy" align="center" style="width: 67%;"></td>
+    <td><img src="project-images/readme-images/MehmetSever.png" alt="Mehmet Sever" align="center" style="width: 67%;"></td>
   </tr>
   <tr align="center" style="width: 67%;">
     <td><a href="" align="center">---------->Ahmet Aksoy<---------</a></td>
